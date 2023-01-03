@@ -6,6 +6,30 @@
     font-family: "Poppins", sans-serif;
 }
 
+body{ min-height:100vh; margin:0; position:relative; }
+header{ min-height:50px; background:lightcyan; }
+footer{ background:PapayaWhip; }
+
+/* Trick: */
+body {
+  position: relative;
+}
+
+body::after {
+  content: '';
+  display: block;
+  height: 50px; /* Set same as footer's height */
+}
+
+#footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+    text-align: center;
+    background-color: #101010;
+}
+
 .navbar{
     background: #131313;
     height: 80px;
@@ -106,7 +130,7 @@
     transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 960px){
+/* @media screen and (max-width: 960px){
     .navbar_container{
         display: flex;
         justify-content: space-between;
@@ -116,7 +140,7 @@
         max-width: 1300px;
         padding: 0;
     }
-}
+} */
 
 .main_content{
     color: white;
@@ -159,7 +183,7 @@
 }
 
 .main__content h1:hover{
-    font-size: 4.5rem;
+    font-size: 4.1rem;
     text-shadow: 0 0 15px #d26404;
     transition: all 0.3s ease;
 }
@@ -250,6 +274,12 @@
 }
 
 @media screen and (max-width: 768px){
+    .main__content h1:hover{
+        font-size: 3.1rem;
+        text-shadow: 0 0 15px #d26404;
+        transition: all 0.3s ease;
+    }
+
     .main__container{
         display: grid;
         grid-template-columns: auto;
@@ -264,7 +294,7 @@
         margin-bottom: 4rem;
     }
     .main__content h1{
-        font-size: 2.5rem;
+        font-size: 3rem;
         margin-top: 2rem;
     }
 
@@ -275,9 +305,22 @@
         font-size: 1rem;
         margin-top: 1.5rem;
     }
+    .pricing{
+        top: 100px;
+    }
 }
 
 @media screen and (max-width: 480px){
+    .services{
+        height: 800px;
+    }
+    
+    .main__content h1:hover{
+        font-size: 2.1rem;
+        text-shadow: 0 0 15px #d26404;
+        transition: all 0.3s ease;
+    }
+
     .main__content h1{
         font-size: 2rem;
         margin-top: 3rem;
@@ -287,12 +330,55 @@
         font-size: 2rem;
     }
     .main__content p{
-        font-size: 2rem;
+        font-size: 1rem;
         margin-top: 1.5rem;
     }
+
     .main__btn{
-        padding: 12px, 36px;
-        margin: 2.5rem 0;
+        top: 20px;
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+        margin: 0 auto;
+        width: 40vh;
+    }
+
+    .buy{
+        margin: auto;
+    }
+
+    .reseller{
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+        margin: 0px auto;
+        width: 40vh;
+    }
+
+    .second__btn{
+        top: 25px;
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+        margin: 0 auto;
+        width: 40vh;
+    }
+
+    .media__container{
+        top: 25px;
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+        margin: 0 auto;
+        width: 40vh;
     }
 }
 
@@ -312,6 +398,7 @@
 }
 
 .pricing__container{
+    justify-content: center;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, auto));
     grid-gap: 1.5rem;
@@ -327,12 +414,11 @@
     border-radius: 30px;
     color: #fff;
     margin-top: 0.5rem;
-    margin: 0.3rem;
     cursor: pointer;
     position: relative;
-    transition: all 0.35s;
     align-items: center;
     justify-content: center;
+    transition: all 0.35s;
     text-decoration: none;
 }
 
@@ -387,12 +473,12 @@
 
 .service__container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
     grid-gap: 1.5rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
     width: 100%;
-    height: 300px;
+    height: 310px;
     align-items: center;
     justify-content: center;
     vertical-align: middle;  
@@ -406,7 +492,7 @@
 }
 
 .anim-box {
-    height: 300px;
+    height: 215px;
 }
 
 .anim-box:hover {
@@ -415,11 +501,12 @@
 }
 
 .s-box img{
+    margin-top: 5px;
     width: 100px;
 }
 
 .s-box span{
-    
+
     margin: 4px, 10px;
     color: rgb(190, 190, 190);
 }
