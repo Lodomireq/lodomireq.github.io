@@ -343,7 +343,7 @@ body::after {
 
     .buy{
         margin: auto;
-        width: 50vh;
+        width: 40vh;
     }
 
     .reseller{
@@ -353,7 +353,7 @@ body::after {
         justify-self: center;
         width: 100%;
         margin: 0px auto;
-        width: 50vh;
+        width: 40vh;
     }
 
     .second__btn{
